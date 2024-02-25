@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --main-color: #ff0;
+    --light-white: rgba(255, 255, 255, .5);
+    --light-black: rgba(0, 0, 0, .3);
+    --light-bg: rgba(255, 255, 255, .1);
+    --white: #fff;
+    --black: #000;
+}
+
+* {
+    font-family: 'Comfortaa', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavio: smooth;
+    scroll-padding-top: 5rem;
+}
+
+*::selection {
+    background-color: var(--main-color);
+    color: var(--black);
+}
+
+*::-webkit-scrollbar {
+    height: .5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--white);
+}
+
+body {
+    background-color: var(--black);
+    overflow-x: hidden;
+}
+
+.container {
+    padding-top: 10rem;
+}
+
+section {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 2rem;
+}
+
+.heading {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 7rem;
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.btn {
+    display: block;
+    border-radius: .5rem;
+    padding: 1.2rem 3rem;
+    background: var(--main-color);
+    color: var(--black);
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    transition: .2s linear;
+}
+
+.btn:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg, transparent, var(--black));
+    z-index: 1000;
+}
+
+.header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.header .flex .logo {
+    font-size: 2.5rem;
+    color: var(--main-color);
+}
+
+.header .flex .navbar a {
+    margin-left: 2rem;
+    font-size: 1.8rem;
+    color: var(--light-white);
+    transition: .2s linear;
+    text-decoration: none;
+}
+
+.header .flex .navbar a:hover {
+    color: var(--white);
+}
+
+#menu-btn {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--white);
+    display: none;
+}
+
+.home {
+    background: url('../img/home-bg.jpg') no-repeat rgba(0, 0, 0, .3);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.home .flex {
+    min-height: calc(100vh - 10rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .flex form {
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    padding: 2rem;
+    width: 50rem;
+    backdrop-filter: blur(.4rem);
+}
+
+.home .flex form h3 {
+    font-size: 2.5rem;
+    color: var(--white);
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.home .flex form p {
+    padding-top: 1rem;
+    font-size: 1.7rem;
+    color: var(--light-white);
+}
+
+.home .flex form .box {
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1.4rem;
+    font-size: 1.8rem;
+    color: var(--white);
+    text-transform: none;
+    background: var(--light-black);
+    margin: 1rem 0;
+
+}
+
+.home .flex form .box::placeholder {
+    color: var(--light-white);
+
+}
+
+/*contact section starts*/
+.contact{
+    background: url('../img/contact-bg.jpg') no-repeat rgba(0, 0, 0, .5);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact .row .map{
+    width: 100%;
+    flex: 1 1 40rem;
+    padding: 2rem;
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    backdrop-filter: blur(.4rem);
+}
+
+.contact .row form{
+    flex: 1 1 40rem;
+    padding: 2rem;
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    backdrop-filter: blur(.4rem);
+}
+
+.contact .row form h3{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--white);
+    padding-bottom: 1rem;
+}
+
+.contact .row form .box{
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: .5rem;
+    background-color: var(--light-black);
+    padding: 1.4rem;
+    font-size: 1.8rem;
+    color: var(--white);
+    text-transform: none;
+}
+
+.contact .row form .box::placeholder{
+    color: var(--light-white);
+}
+
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+.contact .grid{
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 35rem);
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contact .grid .box{
+    padding: 3rem 2rem;
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    backdrop-filter: blur(.4rem);
+    text-align: center;
+}
+
+.contact .grid .box i{
+    height: 5rem;
+    width: 6rem;
+    line-height: 5rem;
+    font-size: 2.5rem;
+    background-color: var(--light-black);
+    border-radius: .5rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.contact .grid .box h3{
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.contact .grid .box a{
+    display: block;
+    padding-top: 1rem;
+    font-size: 1.6rem;
+    color: var(--light-white);
+    line-height: 1.5;
+    text-transform: none;
+}
+
+.contact .grid .box a:hover{
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.contact .credit{
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    color: var(--light-white);
+}
+
+.contact .credit span{
+    color: var(--main-color);
+}
+
+
+
+/*contact section ends*/
+
+/*register section starts*/
+.register{
+    /*    height: 100rem;*/
+
+    background: url('../img/destination-bg.jpg') no-repeat rgba(0,0,0,.5);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+
+}
+
+.register .flex{
+    min-height: calc(100vh - 10rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register .flex form{
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    padding: 2rem;
+    width: 50rem;
+    backdrop-filter: blur(.4rem);
+}
+
+.register .flex form h3{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--black);
+    padding-bottom: 1rem;
+}
+
+.register .flex form .box{
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1.4rem;
+    font-size: 1.8rem;
+    color: var(--light-white);
+    text-transform: none;
+    background: var(--light-black);
+    margin: 1rem 0;
+}
+
+.register .flex form .box::placeholder{
+    color: var(--light-white);
+}
+
+
+.register .flex form .ling {
+    display: flex;
+
+    gap: 8rem;
+}
+
+.register .flex form .ling #gender {
+    width: 22rem;
+}
+
+/*register section ends*/
+
+/*login section starts*/
+.login{
+    background: url('../img/home-bg.jpg') no-repeat rgba(0, 0, 0, .3);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 86rem;
+}
+
+.login .flex{
+    min-height: calc(100vh - 10rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login .flex form{
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    padding: 2rem;
+    width: 50rem;
+    backdrop-filter: blur(.4rem);
+}
+
+.login .flex form h3{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--black);
+    padding-bottom: 1rem;
+}
+
+
+
+.login .flex form .box{
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1.4rem;
+    font-size: 1.8rem;
+    color: var(--light-white);
+    text-transform: none;
+    background: var(--light-black);
+    margin: 1rem 0;
+}
+
+.login .flex form .box::placeholder{
+    color: var(--light-white);
+}
+
+/*login section ends*/
+
+/*profile section starts*/
+#profile-modal .modal-content{
+    background: var(--light-black);
+    width: 100%;
+    height: 100%;
+
+}
+
+#profile-modal span{
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+#profile-modal h5{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+#profile-modal img{
+    border-radius: 18%;
+    height: 19rem
+}
+
+
+#profile-details{
+    font-size: 1.9rem;
+    color: var(--white)
+}
+
+#profile-edit table{
+    font-size: 1.9rem;
+    color: var(--white);
+}
+
+#profile-edit table input{
+    font-size: 1.9rem;
+    color: var(--black);
+}
+
+#profile-edit table textarea{
+    font-size: 1.9rem;
+}
+
+#add-post-modal .modal-content{
+    right: 14rem;
+    width: 86rem;
+    height: 70rem;
+    background: var(--light-bg);
+}
+
+#add-post-modal .box{
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1.4rem;
+    font-size: 1.8rem;
+    color: var(--light-white);
+    text-transform: none;
+    background: var(--light-black);
+    margin: 1rem 0;
+}
+#add-post-form select{
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+    height: 3rem;
+    background: var(--light-black);
+    color: var(--white);
+}
+
+#add-post-form select option{
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+    background: var(--light-black);
+    color: var(--black);
+}
+
+#add-post-form input{
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+    background: var(--light-black);
+   
+}
+
+#add-post-form input::placeholder{
+     color: var(--white);
+}
+
+#add-post-form textarea{
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+    background: var(--light-black);
+    color: var(--white);
+}
+
+#add-post-form textarea::placeholder{
+      color: var(--white);
+}
+
+
+/* Split the screen in half */
+.split {
+    background: url('../img/home-bg.jpg') no-repeat rgba(0, 0, 0, .3);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 100%;
+    /*width: 50%;*/
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+    width: 20%;
+    left: 0;
+    /*background-color: #111;*/
+}
+
+/* Control the right side */
+.right {
+    width: 80%;
+    right: 0;
+    /*background-color: red;*/
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.left .centered .links{
+    display: flex;
+    flex-flow: column;
+}
+
+.left .centered a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    margin: 2rem;
+}
+/*profile section ends*/
+
+/*load posts start*/
+.loadposts{
+    display: flex;
+    gap: 2rem;
+    margin-top: 7rem;
+}
+
+.loadposts h3{
+    padding: 2rem 0;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.loadposts .flex .box{
+    background-color: var(--light-bg);
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(.4rem);
+    border-radius: .5rem;
+}
+
+.loadposts .flex .box:hover{
+    background-color: var(--light-black);
+}
+
+.loadposts .flex .box h3{
+    padding: 2rem 0;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.loadposts .flex .box img{
+    height: 14rem;
+}
+
+.loadposts .flex .box p{
+    padding: 1rem 0;
+    line-height: 2;
+    color: var(--light-white);
+    font-size: 1.5rem;
+}
+
+/*load posts ends*/
+
+/*show blog starts*/
+.showblog{
+    background: url('../img/home-bg.jpg') no-repeat rgba(0, 0, 0, .3);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 100rem;
+}
+
+.showblog .flex{
+    min-height: calc(100vh - 10rem);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    /*margin-top: 2rem;*/
+}
+
+.showblog .flex .box{
+    background-color: var(--light-bg);
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(.4rem);
+    border-radius: .5rem;
+}
+
+.showblog .flex h3{
+    font-size: 2.9rem;
+    color: var(--white);
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.showblog .flex p{
+    padding-top: 1rem;
+    font-size: 2.7rem;
+    color: var(--light-white);
+}
+
+/*show blog starts*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .heading {
+        font-size: 5rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width:768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .flex {
+        position: relative;
+    }
+
+    .header .flex .navbar {
+        position: absolute;
+        top: 100%;
+        left: 2rem;
+        right: 2rem;
+        background-color: var(--light-black);
+        backdrop-filter: blur(.4rem);
+        border-radius: .5rem;
+        transform: scale(0);
+        transform-origin: top right;
+        padding: 1.5rem .5rem;
+    }
+
+    .header .flex .navbar.active {
+        transform: scale(1);
+        transition: .2s linear;
+    }
+
+    .header .flex .navbar a {
+        display: block;
+        padding: 1.5rem .5rem;
+        margin: .5rem 1.5rem;
+        color: var(--white);
+        border-radius: .5rem;
+    }
+
+    .header .flex .navbar a:hover {
+        background-color: var(--light-bg);
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 2.5rem;
+    }
+}
